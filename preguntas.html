@@ -1,39 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Triviador</title>
+    <link href="css/estilos.css" rel="stylesheet" />
+  </head>
+  <body onload="mostrarPregunta()">
+    <div class="contenedor" id="cabecero">
+      <h1>Conocimientos Generales</h1>
+    </div>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="estilos/estilos.css" rel="stylesheet"/>
-</head>
+    <div class="contenedor" id="preguntas">
+      <h2>Pregunta</h2>
+    </div>
+    <div class="contenedor2" id="cantPreguntas">1/10</div>
 
-<body>
-    <div class="container">
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-category">
-                    HISTORIA
-                </div>
-                <div class="card-question">
-                    <p>¿En qué se especializa la cartografía?</p>
-                </div>
-                <div class="card-answer">
-                    Es la ciencia que estudia los mapas.
-                </div>
-                <div class="card-answer">
-                    Es la ciencia que estudia los volcanes.
-                </div>
-                <div class="card-answer">
-                    Es la ciencia que estudia los minerales.
-                </div>
-                <div class="card-answer">
-                    Es la ciencia que estudia los oceanos.
-                </div>
+    <div class="contenedor">
+      <div class="elemento">
+        <ul class="prueba" id="respuestas">
+          <li>pregunta 1</li>
+          <li>pregunta 1</li>
+          <li>pregunta 1</li>
+          <li>pregunta 1</li>
+        </ul>
+      </div>
+    </div>
 
-            </div>
-        </div>
-        <script src="js/app.js"></script>
-        <script src="js/preguntas.js"></script>
-        <script src="js/respuestas.js"></script>
-</body>
-
+    <script src="js/preguntas.js"></script>
+    <script src="js/respuestas.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+  <script >
+    function izquierda(e) {
+      if (navigator.appName == "Netscape" && (e.which == 1 || e.which == 2)) {
+        alert("Botón izquierdo inhabilitado");
+        return false;
+      } else if (
+        navigator.appName == "Microsoft Internet Explorer" &&
+        event.button == 1
+      ) {
+        alert("Botón izquierdo inhabilitado");
+      }
+    }
+    //document.onmousedown = izquierda;
+  </script>
 </html>
